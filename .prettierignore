@@ -1,0 +1,8 @@
+
+build/
+node_modules/
+public/
+
+server/.build
+server/node_modules
+

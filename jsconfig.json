@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src/",
+        "strictNullChecks": true,
+        "paths": {
+            "@assets/*": ["assets/*"],
+            "@components/*": ["components/*"],
+            "@constants/*": ["constants/*"],
+            "@graphql/*": ["graphql/*"],
+            "@pages/*": ["pages/*"],
+            "@utils/*": ["utils/*"]
+        }
+    },
+    "include": ["src"]
+}

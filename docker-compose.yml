@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+    app-server:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                VITE_APP_SERV_API: ${VITE_APP_SERV_API}
+                VITE_FILE_API: ${VITE_FILE_API}
+                VITE_SUBSCRIPTIONS_API: ${VITE_SUBSCRIPTIONS_API}
+                VITE_SERV_API: ${VITE_SERV_API}
+                VITE_STRIPE_PK: ${VITE_STRIPE_PK}
+                SKIP_PREFLIGHT_CHECK: ${SKIP_PREFLIGHT_CHECK}
+                VITE_ENV: ${VITE_ENV}
+                MAINTENANCE_MODE: ${MAINTENANCE_MODE}
+        ports:
+            - 80:80
+    # nginx:
+    #     build: ./nginx
+    #     ports:
+    #         - 80:80
